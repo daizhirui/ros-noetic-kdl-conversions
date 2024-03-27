@@ -7,7 +7,7 @@ pkgname='ros-noetic-kdl-conversions'
 pkgver='1.13.2'
 _pkgver_patch=0
 arch=('any')
-pkgrel=1
+pkgrel=2
 license=('BSD')
 
 ros_makedepends=(
@@ -31,9 +31,10 @@ depends=(
 	orocos-kdl
 )
 
-_dir="geometry-${pkgver}/kdl_conversions"
-source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros/geometry/archive/${pkgver}.tar.gz")
-sha256sums=('6b653d4e10503d3da56bc4000e39ce58d6a85547a37837da576edccecc0c6ae2')
+_commit="fe344b6c848b8239750ad7f8c7eccf86241396d3"
+_dir="geometry-${_commit}/kdl_conversions"
+source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros/geometry/archive/${_commit}.tar.gz")
+sha256sums=('d9ec545b272d37fcceadf6dd6c359570427d8f341760fac5fcd87424b78d2eae')
 
 build() {
 	# Use ROS environment variables.
